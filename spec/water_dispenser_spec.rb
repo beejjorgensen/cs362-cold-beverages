@@ -5,6 +5,11 @@ class MyVessel
   
     def initialize
       @volume = 10
+      @is_full = false
+    end
+
+    def fill
+      @is_full = true
     end
 end
 
