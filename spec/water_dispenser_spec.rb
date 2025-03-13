@@ -45,6 +45,7 @@ describe 'A water dispenser' do
         water = MyReservoir.new(10, 10)
         waterdispenser = WaterDispenser.new(water)
         vessel = MyVessel.new
-        expect(waterdispenser.dispense(vessel)).to eq(1)
+        expect(waterdispenser.dispense(vessel)).to eq(true)
+        expect(waterdispenser.reservoir.current_water_volume).to eq(1)
     end
 end
