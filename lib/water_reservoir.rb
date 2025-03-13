@@ -18,6 +18,10 @@ class WaterReservoir
 
   def drain(volume)
     self.current_water_volume -= volume
+    if (@current_water_volume < 0)
+      @current_water_volume = 0
+    end
+    @current_water_volume
   end
 
 end
