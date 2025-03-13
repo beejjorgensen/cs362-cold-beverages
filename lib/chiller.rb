@@ -28,7 +28,7 @@ class Chiller
   end
 
   def set_level(level)
-    @temperaturetemperature = ROOM_TEMPERATURE - level * 5
+    @temperature = ROOM_TEMPERATURE - level * 5
   end
 
 end
