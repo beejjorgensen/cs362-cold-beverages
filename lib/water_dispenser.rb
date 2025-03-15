@@ -7,7 +7,11 @@ class WaterDispenser
   end
 
   def dispense(vessel)
-    reservoir.drain(vessel.volume)
-  end
+    needed = vessel.volume - vessel.current_volume
+    actual_dispense = [needed, reservoir.current_water_volume].min
 
+    reservoir.drain(actual_dispense)
+
+    vessel.fill(actual_dispense)
+  end
 end
