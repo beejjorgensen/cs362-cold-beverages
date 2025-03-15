@@ -24,6 +24,10 @@ describe 'A water reservoir' do
         expect(reservoir.current_water_volume).to eq(5)
     end 
 
-
+    it 'can not be drained below' do
+        reservoir = WaterReservoir.new(20,10)
+        reservoir.drain(15)
+        expect(reservoir.current_water_volume).to eq(0)
+    end 
 
 end
